@@ -88,7 +88,7 @@ class Client:
         :return: Endpoint id
         """
         if self._ep_id is None:
-            ep_id = self.wait_for_output(b'Device Id:', wait_for_response)
+            ep_id = self.wait_for_output(b'Device ID:', wait_for_response)
             if ep_id is not None:
                 log.debug(ep_id)
                 ep_array = ep_id.split()
